@@ -1,0 +1,73 @@
+<view>
+  <block wx:if="{{loginState}}">
+    <!-- 用户信息层 -->
+    <view class="userView">
+      <van-row bindtap="userClick">
+        <van-col span="24">
+          <view>
+            <van-col offset="2" span="10" >
+              <view class="userPortrait">
+                <van-image
+                  round
+                  width="5rem"
+                  height="5rem"
+                  src="{{userInfo.headPortrait}}"
+                />
+              </view>
+            </van-col>
+            <van-col  offset="2" span="10" >
+              <view class="userNameTag">
+                <van-tag type="primary" size="large">{{userInfo.nickName}}</van-tag>
+              </view>
+            </van-col>
+          </view>
+        </van-col>
+      </van-row>
+      <van-divider />
+    </view>
+    <!-- 用户操作层 -->
+    <view class="userOperationLayer">
+      <block wx:for="{{operationList}}" wx:key="index" wx:for-index="index" >
+        <block wx:if="{{item.number === 0}}">
+          <van-cell title="{{item.name}}" is-link/>
+        </block>
+        <block wx:else>
+          <van-cell title="{{item.name}}" is-link value="{{item.number}}" />
+        </block>
+      </block>
+    </view>
+    <!-- 退出登陆 -->
+    <view class="logginOutView">
+      <van-button type="danger" size="large">退出</van-button>
+    </view>
+  </block>
+  <block wx:else>
+    <!-- 用户信息层 -->
+    <view class="userView">
+      <van-row bindtap="loginClick">
+        <van-col span="24">
+          <view>
+            <van-col  offset="2" span="10" >
+              <view class="userNameTag">
+                <van-tag type="primary" size="large">未登陆</van-tag>
+              </view>
+            </van-col>
+          </view>
+        </van-col>
+      </van-row>
+      <van-divider />
+    </view>
+    <!-- 用户操作层 -->
+    <view class="userOperationLayer">
+      <block wx:for="{{operationList}}" wx:key="index" wx:for-index="index" >
+        <block wx:if="{{item.number === 0}}">
+          <van-cell title="{{item.name}}" is-link/>
+        </block>
+        <block wx:else>
+          <van-cell title="{{item.name}}" is-link value="{{item.number}}" />
+        </block>
+      </block>
+    </view>
+    
+  </block>
+</view>

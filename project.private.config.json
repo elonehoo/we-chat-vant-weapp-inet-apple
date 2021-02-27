@@ -1,0 +1,29 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "users",
+          "pathName": "pages/users/users",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "checkIng",
+          "pathName": "pages/checkIng/checkIng",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/* pages/users/users.wxss */
+.userNameTag{
+  margin-top: 80rpx;
+}
+.userPortrait{
+  margin-top: 20rpx;
+}
+.userView{
+  height: 200rpx;
+  margin-top: 15rpx;
+}
+.userOperationLayer{
+  margin-top: 50rpx;
+}
+.logginOutView{
+  margin-top: 50%;
+}

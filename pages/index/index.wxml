@@ -1,0 +1,38 @@
+<view class="signView">
+  <van-nav-bar
+  title="首页"
+  fixed
+  safe-area-inset-top="{{false}}"
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"/>
+  <van-row gutter="20">
+    <van-col offset="8" span="12">
+      <view>您已签到{{signTime}}分钟</view>
+    </van-col>
+  
+  </van-row>
+  <van-row gutter="20">
+    <van-col offset="8" span="8">
+      <block wx:if="{{signState}}">
+        <view>
+          <van-button 
+            size="large" 
+            round 
+            type="primary">
+              签到
+          </van-button>
+        </view>
+      </block>
+      <block wx:else>
+        <view>
+          <van-button 
+            size="large" 
+            round 
+            type="danger">
+              签退
+          </van-button>
+        </view>
+      </block>
+    </van-col>
+  </van-row>
+</view>

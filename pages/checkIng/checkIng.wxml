@@ -1,0 +1,9 @@
+<view>
+  <van-nav-bar
+  title="正在签到"
+  fixed
+  safe-area-inset-top="{{false}}"
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"/>
+  
+</view>
